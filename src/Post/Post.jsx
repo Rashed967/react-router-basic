@@ -1,13 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 
 const Post = ({post}) => {
     const {body, id, title, userId} = post;
+    const navigate = useNavigate()
+    const navigateToNext = () =>{
+        navigate(`/postDetail/${id}`)
+    }
     return (
         <div>
             <h3>{title}</h3>
             <p>{userId}</p>
-            <button><Link to={`/postDetail/${id}`}>Read more</Link></button>
+            <Link to={`/postDetail/${id}`}><button>Read more</button></Link>
+            <button onClick={navigateToNext}>See more</button>
         </div>
     );
 };
