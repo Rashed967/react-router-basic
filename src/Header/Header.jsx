@@ -4,10 +4,10 @@ import  ActiveLink  from '../ActiveLink/ActiveLink';
 
 const Header = () => {
     return (
-        <nav>
+        <nav className='nav'>
             <Link to="/">Home</Link>
             <Link to="/About">About</Link>
-            <ActiveLink to="/Friends">Friends</ActiveLink>
+            <Link to="/Friends">Friends</Link>
             <Link to="/Contact">Contact</Link>
             <Link to="/post">Post</Link>
         </nav>
